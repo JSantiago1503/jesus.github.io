@@ -56,11 +56,11 @@
 
     <script>
         document.getElementById('formDedicatoria').addEventListener('submit', function(e) {
-            e.preventDefault(); // Evita que la p·gina se recargue
+            e.preventDefault(); // Evita que la p√°gina se recargue
 
-            // 1. Reemplaza este n˙mero por el tuyo (con cÛdigo de paÌs, sin el signo +)
-            // Ejemplo: 521234567890 (MÈxico), 34123456789 (EspaÒa), 57123456789 (Colombia)
-            // Si lo dejas vacÌo, abrir· WhatsApp para que elijas a quÈ contacto envi·rselo.
+            // 1. Reemplaza este n√∫mero por el tuyo (con c√≥digo de pa√≠s, sin el signo +)
+            // Ejemplo: 521234567890 (M√©xico), 34123456789 (Espa√±a), 57123456789 (Colombia)
+            // Si lo dejas vac√≠o, abrir√° WhatsApp para que elijas a qu√© contacto envi√°rselo.
             const numeroTelefono = "525665067247"; 
 
             // 2. Obtener los valores del formulario
@@ -78,13 +78,13 @@ Cancion: ${cancion}
 Mensaje:
 "${dedicatoria}"`;
 
-            // 4. Codificar el texto para que sea v·lido en una URL
+            // 4. Codificar el texto para que sea v√°lido en una URL
             const mensajeCodificado = encodeURIComponent(mensajeOriginal);
 
             // 5. Construir la URL de la API de WhatsApp
             let urlWhatsapp = `https://wa.me/${numeroTelefono}?text=${mensajeCodificado}`;
 
-            // 6. Redirigir al usuario (abrir· la app de WhatsApp o WhatsApp Web autom·ticamente)
+            // 6. Redirigir al usuario (abrir√° la app de WhatsApp o WhatsApp Web autom√°ticamente)
             window.open(urlWhatsapp, '_blank');
         });
     </script>
